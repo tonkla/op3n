@@ -24,8 +24,8 @@ func main() {
 	r.GET("/thailand-provinces/:province/districts/:district", province.GetDistrict)
 	r.GET("/thailand-provinces/:province/districts/:district/subdistricts", province.GetAllSubdistricts)
 	r.GET("/thailand-provinces/:province/districts/:district/subdistricts/:subdistrict", province.GetSubdistrict)
-	r.GET("/thailand-provinces/postcodes", province.GetPostcodes)
-	r.GET("/thailand-provinces/postcodes/:postcode", province.GetByPostcode)
+	r.GET("/postcodes", province.GetPostcodes)
+	r.GET("/postcodes/:postcode", province.GetByPostcode)
 
 	r.Run(":3000")
 }
