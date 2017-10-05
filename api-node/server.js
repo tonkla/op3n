@@ -20,7 +20,7 @@ app.get('/thailand/provinces/:province/districts', province.getDistricts)
 app.get('/thailand/provinces/:province/districts/:district', province.getByDistrict)
 app.get('/thailand/provinces/:province/districts/:district/subdistricts', province.getSubdistricts)
 app.get('/thailand/provinces/:province/districts/:district/subdistricts/:subdistrict', province.getBySubdistrict)
-app.get('/thailand/postcodes', (req, res) => { res.redirect(307, '/thailand/postcodes/:postcode') })
+app.get('/thailand/postcodes', (req, res) => { res.status(404).send([]) })
 app.get('/thailand/postcodes/:postcode', province.getByPostcode)
 
 app.listen(3000)
