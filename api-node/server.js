@@ -16,11 +16,14 @@ const province = require('./app/province')
 app.get('/thailand', (req, res) => { res.redirect(307, '/thailand/provinces') })
 app.get('/thailand/provinces', province.getProvinces)
 app.get('/thailand/provinces/:province', province.getByProvince)
-// app.get('/thailand/provinces/:province/districts', province.getDistricts)
-// app.get('/thailand/provinces/:province/districts/:district', province.getByDistrict)
-// app.get('/thailand/provinces/:province/districts/:district/subdistricts', province.getSubdistricts)
-// app.get('/thailand/provinces/:province/districts/:district/subdistricts/:subdistrict', province.getBySubdistrict)
-// app.get('/thailand/postcodes', (req, res) => { res.redirect(307, '/thailand/postcodes/:postcode') })
-// app.get('/thailand/postcodes/:postcode', province.getByPostcode)
+app.get('/thailand/provinces/:province/districts', province.getDistricts)
+app.get('/thailand/provinces/:province/districts/:district', province.getByDistrict)
+app.get('/thailand/provinces/:province/districts/:district/subdistricts', province.getSubdistricts)
+app.get('/thailand/provinces/:province/districts/:district/subdistricts/:subdistrict', province.getBySubdistrict)
+app.get('/thailand/postcodes', (req, res) => { res.redirect(307, '/thailand/postcodes/:postcode') })
+app.get('/thailand/postcodes/:postcode', province.getByPostcode)
 
 app.listen(3000)
+
+// for testing that is called by chai-http
+module.exports = app
