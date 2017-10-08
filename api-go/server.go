@@ -31,5 +31,5 @@ func main() {
 }
 
 func home(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"message": "Please visit https://www.op3n.ga for documentation."})
+	c.JSON(http.StatusOK, gin.H{"message": "Please visit https://github.com/tonkla/op3n for documentation."})
 }
