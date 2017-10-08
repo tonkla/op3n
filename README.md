@@ -4,7 +4,7 @@ This project aims to translate an open data in generic forms into a JSON format.
 
 ## Forex (currency price feed)
 
-The API serves a real-time price feed of many currency pairs that have been provided publicly by [TrueFX](https://www.truefx.com)
+The API serves a real-time price feed of many currency pairs that have been provided publicly by [TrueFX](https://www.truefx.com).
 
 * [https://api.op3n.ga/forex](https://api.op3n.ga/forex)
 * [https://api.op3n.ga/forex/eurusd](https://api.op3n.ga/forex/eurusd)
@@ -23,7 +23,7 @@ The current version is accessible by only its database ID,
 * [https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts](https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts)
 * [https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts/1](https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts/1)
 
-List the subdistricts by its postal code (one district can have different postal codes),
+List the subdistricts by its postal code (one district can have many postal codes, because of transportation),
 
 * [https://api.op3n.ga/thailand/postcodes/10200](https://api.op3n.ga/thailand/postcodes/10200)
 
