@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.text())
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.json({ 'message': 'Please visit https://www.op3n.ga for documentation.' }))
+app.get('/', (req, res) => res.json({ 'message': 'Please visit https://web.op3n.ga for documentation.' }))
 
 const forex = require('./app/forex')
 app.get('/forex', forex.getAll)
