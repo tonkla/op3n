@@ -25,11 +25,8 @@ The API serves the data of the [Thailand administrative divisions](https://en.wi
 The current version is accessible by only its database ID,
 
 * [https://api.op3n.ga/thailand/provinces](https://api.op3n.ga/thailand/provinces)
-* [https://api.op3n.ga/thailand/provinces/1](https://api.op3n.ga/thailand/provinces/1)
 * [https://api.op3n.ga/thailand/provinces/1/districts](https://api.op3n.ga/thailand/provinces/1/districts)
-* [https://api.op3n.ga/thailand/provinces/1/districts/1](https://api.op3n.ga/thailand/provinces/1/districts/1)
 * [https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts](https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts)
-* [https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts/1](https://api.op3n.ga/thailand/provinces/1/districts/1/subdistricts/1)
 
 List the subdistricts by its postal code (one district can have many postal codes, because of transportation),
 
