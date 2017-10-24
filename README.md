@@ -16,7 +16,7 @@ The API serves a real-time price feed and historical prices of the stocks that h
 
 * [https://api.op3n.ga/stock](https://api.op3n.ga/stock)
 * [https://api.op3n.ga/stock/advanc](https://api.op3n.ga/stock/advanc)
-* [https://api.op3n.ga/stock/advanc?from=20171001&to20171010](https://api.op3n.ga/stock/advanc?from=20171001&to20171010)
+* [https://api.op3n.ga/stock/advanc?from=20171001&to=20171010](https://api.op3n.ga/stock/advanc?from=20171001&to=20171010)
 
 ## Administrative divisions of Thailand
 
