@@ -10,7 +10,7 @@ The API serves a real-time price feed of many currency pairs that have been prov
 * [https://api.op3n.ga/forex/eurusd](https://api.op3n.ga/forex/eurusd)
 * [https://api.op3n.ga/forex/eurusd,usdjpy](https://api.op3n.ga/forex/eurusd,usdjpy)
 
-## SET price feed
+## SET (stock price feed)
 
 The API serves a real-time price feed and historical prices of the stocks that have been provided publicly by [The Stock Exchange of Thailand](https://marketdata.set.or.th/mkt/marketsummary.do). (npm: [setscraper](https://github.com/tonkla/setscraper)).
 
