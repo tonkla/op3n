@@ -45,4 +45,18 @@ describe('Stock', () => {
         done()
       })
   })
+
+  it('GET highlights of the stock', (done) => {
+    chai.request(server)
+      .get('/stock/ADVANC/highlights')
+      .end((err, res) => {
+        res.should.have.status(200)
+        res.body.should.be.a('object')
+        res.body.should.have.property('symbol')
+        res.body.should.have.property('highlights')
+        res.body.highlights.should.be.a('array')
+        res.body.highlights.length.should.be.above(1)
+        done()
+      })
+  })
 })

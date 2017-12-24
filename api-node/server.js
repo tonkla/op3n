@@ -32,6 +32,7 @@ app.get('/thailand/postcodes/:postcode', province.getByPostcode)
 const stock = require('./app/stock')
 app.get('/stock', stock.getSummary)
 app.get('/stock/:symbol', stock.getBySymbol)
+app.get('/stock/:symbol/highlights', stock.getHighlights)
 
 app.listen(3000)
 console.log('Server started on port 3000')
