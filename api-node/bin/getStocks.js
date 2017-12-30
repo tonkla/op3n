@@ -1,30 +1,18 @@
 ;(async function () {
   const scraper = require('setscraper')
   const mongoose = require('mongoose')
+
+  const { stockSchema, indexSchema } = require('../app/stock/schema')
+
   mongoose.connect('mongodb://localhost/op3n', { useMongoClient: true })
   mongoose.Promise = global.Promise
 
   // MongoDB CLI: db.stocks.drop()
 
-  const stockSchema = mongoose.Schema({
-    symbol: { type: String, index: true },
-    market: { type: String, index: true },
-    name: String,
-    nameTH: String,
-    indexes: { type: [String], index: true },
-    isActive: { type: Boolean, index: true },
-    updated: { type: Date, default: Date.now }
-  })
   const Stock = mongoose.model('Stock', stockSchema)
-
-  const indexSchema = mongoose.Schema({
-    symbol: { type: String, index: true },
-    indexes: { type: [String], index: true },
-    updated: { type: Date, default: Date.now }
-  })
   const IndexStock = mongoose.model('IndexStock', indexSchema)
 
-  async function updateStocks () {
+  async function addStocks () {
     const stocks = await scraper.getStocks({ lang: 'th' })
     for (let s of stocks) {
       const stock = new Stock({ symbol: s.symbol, market: s.market, name: s.name, nameTH: s.nameTH })
@@ -35,7 +23,7 @@
     }
   }
 
-  async function updateIndexStocks () {
+  async function addIndexStocks () {
     const results = []
     const indexes = ['SET50', 'SET100', 'SETHD', 'sSET']
     for (let index of indexes) {
@@ -47,10 +35,11 @@
   function saveIndexes (results) {
     for (let data of results) {
       for (let s of data.stocks) {
-        Stock.update({ symbol: s.symbol }, { $push: { indexes: data.index } }, (err, raw) => {
-          if (err) console.error(err)
-          console.log(`Updated: ${s.symbol}`)
-        })
+        Stock.update({ symbol: s.symbol },
+          { $push: { indexes: data.index } }, (err, raw) => {
+            if (err) console.error(err)
+            console.log(`Updated: ${s.symbol}`)
+          })
 
         IndexStock.findOneAndUpdate({ symbol: s.symbol },
           { $push: { indexes: data.index } },
@@ -65,6 +54,6 @@
     }
   }
 
-  await updateStocks()
-  await updateIndexStocks()
+  await addStocks()
+  await addIndexStocks()
 })()

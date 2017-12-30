@@ -13,8 +13,8 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "fast-csv": "^2.4.1",
-    "mongoose": "^4.13.7",
-    "setscraper": "^0.5.1",
+    "mongoose": "^4.13.8",
+    "setscraper": "^0.5.5",
     "sqlite3": "^3.1.13",
     "truefx": "^0.1.3"
   },
@@ -22,6 +22,6 @@
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
     "eslint": "^4.14.0",
-    "mocha": "^4.0.1"
+    "mocha": "^4.1.0"
   }
 }

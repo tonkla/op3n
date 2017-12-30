@@ -3,15 +3,7 @@ const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/op3n', { useMongoClient: true })
 mongoose.Promise = global.Promise
 
-const feedSchema = mongoose.Schema({
-  symbol: { type: String, index: true },
-  date: { type: Number, index: true },
-  open: Number,
-  high: Number,
-  low: Number,
-  close: Number,
-  volume: Number
-})
+const feedSchema = require('./schema')
 const Feed = mongoose.model('Feed', feedSchema)
 
 function getSummary (req, res) {

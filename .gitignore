@@ -1,4 +1,4 @@
-bin/
+bin/private/
 node_modules/
 private/
 tmp/
